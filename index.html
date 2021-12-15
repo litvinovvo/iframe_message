@@ -14,7 +14,7 @@
     console.log('time', params.get('timeout'));
     setTimeout(() => {
       console.log('send load event');
-      parent.postMessage('load', '*');
+      parent.postMessage('loaded', '*');
     },params.get('timeout'));
     
 </script>
