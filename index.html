@@ -12,7 +12,11 @@
 <script>
     const params = new URLSearchParams(location.search);
     console.log('time', params.get('timeout'));
-    parent.postMessage('load', '*');
+    setTimeout(() => {
+      console.log('send load event);
+      parent.postMessage('load', '*');
+    },params.get('timeout'));
+    
 </script>
   <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Snake_River_%285mb%29.jpg" />
 </body>
