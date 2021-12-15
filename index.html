@@ -13,7 +13,7 @@
     const params = new URLSearchParams(location.search);
     console.log('time', params.get('timeout'));
     setTimeout(() => {
-      console.log('send load event);
+      console.log('send load event');
       parent.postMessage('load', '*');
     },params.get('timeout'));
     
